@@ -46,7 +46,7 @@ cardsFun()
 const del = (i) => {
     // console.log(i);
     console.log(datas[i].value);
-    localStorage.setItem('data', btoa(JSON.stringify(datas.filter((val) => val.value === datas[i].value ? {} : val))))
+    localStorage.setItem('data', btoa(JSON.stringify(datas.filter((val, index) => index !== i))))
     Save()
     cardsFun()
 }   
